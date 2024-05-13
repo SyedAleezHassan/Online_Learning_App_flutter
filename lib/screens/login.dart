@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_app_fyp/navBar/navBar.dart';
 import 'package:learning_app_fyp/screens/signUp.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -113,6 +114,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const BoxDecoration(),
                 child: ElevatedButton(
                     onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => NavBar()));
                       // Add your button action here
                     },
                     style: ElevatedButton.styleFrom(

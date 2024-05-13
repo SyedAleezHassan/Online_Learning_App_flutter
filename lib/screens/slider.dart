@@ -32,8 +32,8 @@ class sliderScreen extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      margin:
-                          const EdgeInsets.symmetric(horizontal: 5.0, vertical: 50),
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 5.0, vertical: 50),
                       decoration: const BoxDecoration(
                         color: Colors.white,
                       ),
@@ -85,7 +85,8 @@ class sliderScreen extends StatelessWidget {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   border: Border.all(
-                                      color: const Color.fromRGBO(128, 0, 128, 5),
+                                      color:
+                                          const Color.fromRGBO(128, 0, 128, 5),
                                       width: 2)),
                               child: ElevatedButton(
                                   onPressed: () {
