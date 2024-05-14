@@ -81,10 +81,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: 180,
                                 width: 250,
                                 margin: EdgeInsets.only(top: 15, left: 15),
-                                child: Text("lalalal"),
+                                child: Stack(
+                                  children: [
+                                    // Text("lalalal"),
+                                    Positioned(
+                                      top: 0,
+                                      bottom: 0,
+                                      child: Image.asset(
+                                        "assets/card.png",
+                                        height: 270,
+                                        width: 250,
+                                      ),
+                                    )
+                                  ],
+                                ),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 134, 121, 121),
+                                    // color: Color.fromARGB(255, 134, 121, 121),
                                     boxShadow: [
                                       BoxShadow(
                                         color: Colors.grey.withOpacity(0.5),
