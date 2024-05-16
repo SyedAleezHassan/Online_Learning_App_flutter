@@ -1,6 +1,7 @@
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app_fyp/screens/account.dart';
+import 'package:learning_app_fyp/screens/course.dart';
 import 'package:learning_app_fyp/screens/home.dart';
 import 'package:learning_app_fyp/screens/message.dart';
 
@@ -82,7 +83,7 @@ class _NavBarState extends State {
           _child = HomeScreen();
           break;
         case 1:
-          _child = AccountScreen();
+          _child = CourseScreen();
           break;
         case 2:
           _child = MessageScreen();

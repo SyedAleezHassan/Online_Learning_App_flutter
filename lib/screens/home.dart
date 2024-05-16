@@ -1,6 +1,9 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:learning_app_fyp/color/colors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   height: 170,
                   width: double.infinity,
-                  color: Color.fromRGBO(128, 0, 128, 5),
+                  color: appColor.primaryColor,
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +86,77 @@ class _HomeScreenState extends State<HomeScreen> {
                                 margin: EdgeInsets.only(top: 15, left: 15),
                                 child: Stack(
                                   children: [
-                                    // Text("lalalal"),
+                                    Positioned(top: 10, child: Text("lalalal")),
+                                    Positioned(
+                                      top: 0,
+                                      bottom: 0,
+                                      child: Image.asset(
+                                        "assets/card.png",
+                                        height: 270,
+                                        width: 250,
+                                      ),
+                                    ),
+                                    Positioned(
+                                        top: 120,
+                                        left: 15,
+                                        child: Image.asset(
+                                            "assets/startButton.jpg")),
+                                  ],
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    // color: Color.fromARGB(255, 134, 121, 121),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color:
+                                            Color.fromARGB(255, 169, 211, 248)
+                                                .withOpacity(0.3),
+                                        spreadRadius: 0.2,
+                                        blurRadius: 20,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ]),
+                              ),
+                              Container(
+                                height: 180,
+                                width: 250,
+                                margin: EdgeInsets.only(top: 15, left: 15),
+                                child: Stack(
+                                  children: [
+                                    Positioned(top: 10, child: Text("lalalal")),
+                                    Positioned(
+                                      top: 0,
+                                      bottom: 0,
+                                      child: Image.asset(
+                                        "assets/card.png",
+                                        height: 270,
+                                        width: 250,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    // color: Color.fromARGB(255, 134, 121, 121),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color:
+                                            Color.fromARGB(255, 169, 211, 248)
+                                                .withOpacity(0.3),
+                                        spreadRadius: 0.2,
+                                        blurRadius: 20,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ]),
+                              ),
+                              Container(
+                                height: 180,
+                                width: 250,
+                                margin: EdgeInsets.only(
+                                    top: 15, left: 15, right: 15),
+                                child: Stack(
+                                  children: [
+                                    Positioned(top: 10, child: Text("lalalal")),
                                     Positioned(
                                       top: 0,
                                       bottom: 0,
@@ -100,44 +173,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                     // color: Color.fromARGB(255, 134, 121, 121),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.grey.withOpacity(0.5),
-                                        spreadRadius: 5,
-                                        blurRadius: 7,
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ]),
-                              ),
-                              Container(
-                                height: 180,
-                                width: 250,
-                                margin: EdgeInsets.only(top: 15, left: 15),
-                                child: Text("lalalal"),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 134, 121, 121),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.5),
-                                        spreadRadius: 5,
-                                        blurRadius: 7,
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ]),
-                              ),
-                              Container(
-                                height: 180,
-                                width: 250,
-                                margin: EdgeInsets.only(
-                                    top: 15, left: 15, right: 15),
-                                child: Text("lalalal"),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 188, 184, 184),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.5),
-                                        spreadRadius: 5,
-                                        blurRadius: 7,
+                                        color:
+                                            Color.fromARGB(255, 169, 211, 248)
+                                                .withOpacity(0.3),
+                                        spreadRadius: 0.2,
+                                        blurRadius: 20,
                                         offset: Offset(0, 3),
                                       ),
                                     ]),
@@ -175,13 +215,36 @@ class _HomeScreenState extends State<HomeScreen> {
                               ]),
                           height: 130,
                           width: 344,
+                          padding: EdgeInsets.only(left: 19, top: 25),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Weekly Assessments",
+                                style: TextStyle(
+                                    //color: Colors.white,
+                                    fontFamily: 'Schyler',
+                                    fontSize: 21),
+                              ),
+                              SizedBox(
+                                height: 18,
+                              ),
+                              Text(
+                                "Assignments ",
+                                style: TextStyle(
+                                    //color: Colors.white,
+                                    fontFamily: 'Schyler',
+                                    fontSize: 21),
+                              ),
+                            ],
+                          ),
                           // margin: EdgeInsets.all(20),
                         ),
                         Container(
                           margin: EdgeInsets.only(left: 19, top: 10),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color.fromARGB(255, 166, 133, 133),
+                              color: Color.fromARGB(255, 241, 238, 238),
                               boxShadow: [
                                 BoxShadow(
                                   color: Color.fromARGB(255, 154, 149, 149)
@@ -193,6 +256,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               ]),
                           height: 230,
                           width: 344,
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                "assets/Meetup.png",
+                                height: 230,
+                                width: 400,
+                                // fit: BoxFit.cover,
+                              ),
+                            ],
+                          ),
                           // margin: EdgeInsets.all(20),
                         ),
                       ],
@@ -233,7 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
   //         Container(
   //           height: 170,
   //           width: 500,
-  //           color: Color.fromRGBO(128, 0, 128, 5),
+  //           color: appColor.primaryColor,
   //           child: Column(
   //             children: [
   //               Text(
