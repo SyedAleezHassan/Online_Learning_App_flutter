@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_app_fyp/color/colors.dart';
 import 'package:learning_app_fyp/navBar/navBar.dart';
 import 'package:learning_app_fyp/screens/signUp.dart';
 
@@ -27,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
-                  color: Color.fromRGBO(128, 0, 128, 5)),
+                  color: appColor.primaryColor),
             ),
           ),
           Column(
@@ -123,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius:
                             BorderRadius.circular(10.0), // Rectangular border
                       ),
-                      backgroundColor: const Color.fromRGBO(128, 0, 128, 5),
+                      backgroundColor:  appColor.primaryColor,
                     ),
                     child: const Text(
                       'Login',
@@ -150,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: const Text(
                   " Sign up",
                   style: TextStyle(
-                      color: Color.fromRGBO(128, 0, 128, 5),
+                      color: appColor.primaryColor,
                       fontWeight: FontWeight.bold),
                 ),
               )
