@@ -1,9 +1,10 @@
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:learning_app_fyp/screens/account.dart';
-import 'package:learning_app_fyp/screens/course.dart';
-import 'package:learning_app_fyp/screens/home.dart';
-import 'package:learning_app_fyp/screens/message.dart';
+import 'package:learning_app_fyp/navBar/account.dart';
+import 'package:learning_app_fyp/navBar/course.dart';
+import 'package:learning_app_fyp/navBar/home.dart';
+import 'package:learning_app_fyp/navBar/message.dart';
+import 'package:learning_app_fyp/navBar/search.dart';
 
 // import 'content/account.dart';
 // import 'content/grid.dart';
@@ -86,6 +87,9 @@ class _NavBarState extends State {
           _child = CourseScreen();
           break;
         case 2:
+          _child = SearchResult();
+          break;
+        case 3:
           _child = MessageScreen();
           break;
       }

@@ -159,7 +159,7 @@ class _CourseScreenState extends State<CourseScreen> {
                 child: TabBarView(
                   children: [
                     ListView.builder(
-                      itemCount: 5, // Number of items in 'All' tab
+                      itemCount: 20, // Number of items in 'All' tab
                       itemBuilder: (context, index) {
                         return ListTile(
                           title: Text('Popular Course ${index + 1}'),
@@ -167,16 +167,16 @@ class _CourseScreenState extends State<CourseScreen> {
                       },
                     ),
                     ListView.builder(
-                      itemCount: 5, // Number of items in 'Popular' tab
+                      itemCount: 20, // Number of items in 'Popular' tab
                       itemBuilder: (context, index) {
                         return ListTile(
                           title: Text('Popular Course ${index + 1}'),
-                          tileColor: Colors.amber,
+                          // tileColor: Colors.amber,
                         );
                       },
                     ),
                     ListView.builder(
-                      itemCount: 5, // Number of items in 'New' tab
+                      itemCount: 20, // Number of items in 'New' tab
                       itemBuilder: (context, index) {
                         return ListTile(
                           title: Text('New Course ${index + 1}'),
