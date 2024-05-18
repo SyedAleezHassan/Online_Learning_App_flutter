@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+// import 'package:learning_app_fyp/color/colors.dart';
+// import 'package:learning_app_fyp/data/courseData.dart';
+
+import '../customWidgets/course_widget.dart';
+import '../data/courseData.dart';
 
 class CourseScreen extends StatefulWidget {
   const CourseScreen({Key? key}) : super(key: key);
@@ -159,11 +164,15 @@ class _CourseScreenState extends State<CourseScreen> {
                 child: TabBarView(
                   children: [
                     ListView.builder(
-                      itemCount: 20, // Number of items in 'All' tab
+                      itemCount:
+                          courseData.length, // Number of items in 'All' tab
                       itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text('Popular Course ${index + 1}'),
-                        );
+                        return ProductCard(
+                            imageUrl: courseData[index]["imgUrl"],
+                            productName: courseData[index]["courseName"],
+                            description: courseData[index]["courseDescription"],
+                            price: courseData[index]["price"],
+                             indexxx:index,);
                       },
                     ),
                     ListView.builder(
