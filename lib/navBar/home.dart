@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: 15,
                           ),
                           Text(
-                            "Let's start learning ",
+                            "Let's Start Learning ",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Schyler',
@@ -281,10 +281,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 235, 231, 231),
+                    color: Color.fromARGB(255, 255, 255, 255),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color:
+                            Color.fromARGB(255, 146, 143, 143).withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
                         offset: Offset(0, 3),
@@ -292,6 +293,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ]),
                 height: 100,
                 width: 344,
+                child: Image.asset(
+                  "assets/homesBar.png",
+                  fit: BoxFit.cover,
+                  // height: 130,
+                  // width: 344,
+                ),
                 // margin: EdgeInsets.all(20),
               ),
             ),

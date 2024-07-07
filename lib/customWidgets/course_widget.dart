@@ -20,30 +20,53 @@ class ProductCard extends StatefulWidget {
   State<ProductCard> createState() => _ProductCardState();
 }
 
-List<Map<String, String>> favoriteItems = [];
-
 class _ProductCardState extends State<ProductCard> {
+  List<Map<String, String>> favoriteItems = [];
+  // String? itemName;
+  // toggleFavorite(String itemName, String itemDec, String imgUrl, num price) {
+  //   setState(() {
+  //     if (favoriteItems.any((item) => item.containsValue(itemName))) {
+  //       favoriteItems.removeWhere((item) => item.containsValue(itemName));
+  //     } else {
+  //       favoriteItems.add({
+  //         'name': itemName,
+  //         "decription": itemDec,
+  //         "imgurl": imgUrl,
+  //         "price": price.toString()
+  //       });
+  //     }
+  //   });
+  //   print(favoriteItems);
+  //   print(favoriteItems.length);
+  //   // print(favoriteItems.any((item) => item.containsValue(itemName)));
+  //   // return itemName;
+  // }
+//naya wala
   void toggleFavorite(
       String itemName, String itemDec, String imgUrl, num price) {
-    setState(() {
-      // if (favoriteItems.contains(itemName)) {
-      //   favoriteItems.remove(itemName);
-      // } else {
-      //   favoriteItems.add({"name": itemName});
-      // }
-      if (favoriteItems.any((item) => item.containsValue(itemName))) {
-        favoriteItems.removeWhere((item) => item.containsValue(itemName));
-      } else {
-        favoriteItems.add({
-          'name': itemName,
-          "decription": itemDec,
-          "imgurl": imgUrl,
-          "price": price.toString()
-        });
-      }
+    // setState(() {
+    // if (favoriteItems.contains(itemName)) {
+    //   favoriteItems.remove(itemName);
+    // } else {
+    //   favoriteItems.add({"name": itemName});
+    // }
+    // if (favoriteItems.any((item) => item.containsValue(itemName))) {
+    //   favoriteItems.removeWhere((item) => item.containsValue(itemName));
+    // } else {
+    favoriteItems.add({
+      'name': itemName,
+      "decription": itemDec,
+      "imgurl": imgUrl,
+      "price": price.toString()
     });
+    // }
+    print(favoriteItems);
+    // });
   }
 
+  var tog;
+
+  //  bool containsTitle = favoriteItems.any((item) => item['name'] == itemName);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -103,6 +126,7 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ],
           ),
+
           IconButton(
               onPressed: () {
                 toggleFavorite(
@@ -111,11 +135,43 @@ class _ProductCardState extends State<ProductCard> {
                   courseData[widget.indexxx]["imgUrl"],
                   courseData[widget.indexxx]["price"],
                 );
-                print(favoriteItems);
               },
               icon: Icon(Icons.favorite_outline_outlined)),
+
+          // IconButton(
+          //   onPressed: () {
+          //     toggleFavorite(
+          //       courseData[widget.indexxx]["courseName"],
+          //       courseData[widget.indexxx]["courseDescription"],
+          //       courseData[widget.indexxx]["imgUrl"],
+          //       courseData[widget.indexxx]["price"],
+          //     );
+          //     // tog = toggleFavorite(
+          //     //   courseData[widget.indexxx]["courseName"],
+          //     //   courseData[widget.indexxx]["courseDescription"],
+          //     //   courseData[widget.indexxx]["imgUrl"],
+          //     //   courseData[widget.indexxx]["price"],
+          //     // );
+          //     // print(tog);
+          //     print(favoriteItems);
+          //     // print(favoriteItems.any((item) => item.containsValue(tog)));
+
+          //     // print(itemName);
+          //     // print(d);
+          //     // print(itemName);
+          //   },
+          //   icon: Icon(
+          //     favoriteItems.any((item) => item['name'] == tog)
+          //         ? Icons.favorite
+          //         : Icons.favorite_border,
+          //     color: favoriteItems.any((item) => item['name'] == tog)
+          //         ? Colors.red
+          //         : null,
+          //   ),
+          // )
         ],
       ),
     );
   }
 }
+// bool isFavorite = favoriteItems.any((item) => item.containsValue(itemName));
